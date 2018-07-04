@@ -1,3 +1,7 @@
-function setHtml(id, html) {
-    document.getElementById('app').innerHTML = html;
-}
+var setHtml = function (id, html) {
+    document.getElementById(id).innerHTML = html;
+};
+
+export {
+    setHtml
+};
