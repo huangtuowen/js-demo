@@ -3,4 +3,4 @@ import {
 } from './common.js';
 import './hello.css';
 
-setHtml('app1', '<p class="hello">hello webpack!<p>');
+setHtml('app', '<p class="hello">hello webpack-dev-server!<p>');
