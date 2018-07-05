@@ -7,5 +7,5 @@ var app = new Vue({
     components: {
         Hello
     },
-    template: '<Hello />'
+    template: '<div><input type="text" /><input type="text" /><Hello /></div>'
 });
