@@ -8,23 +8,15 @@ module.exports = {
             'vue$': 'vue/dist/vue.esm.js'
         }
     },
-    mode: "development",
-    devtool: 'inline-source-map',
-    devServer: {
-        contentBase: './dist',
-        hot: true
-    },
     entry: {
         index: './src/index.js'
     },
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, '../dist'),
         filename: '[name].js'
     },
     plugins: [
-        new VueLoaderPlugin(),
-        new webpack.NamedModulesPlugin(),
-        new webpack.HotModuleReplacementPlugin()
+        new VueLoaderPlugin()
     ],
     module: {
         rules: [{

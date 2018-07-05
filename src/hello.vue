@@ -7,7 +7,7 @@ export default {
   name: "Hello",
   data: function() {
     return {
-      message: "Hello Vue loader hot!"
+      message: "Hello webpack config!"
     };
   }
 };
