@@ -1,22 +1,27 @@
 const path = require('path');
-// const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 module.exports = {
+    resolve: {
+        alias: {
+            'vue$': 'vue/dist/vue.esm.js'
+        }
+    },
     mode: "development",
     devtool: 'inline-source-map',
     devServer: {
         contentBase: './dist'
     },
     entry: {
-        hello: './src/hello.js'
+        index: './src/index.js'
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].js'
     },
-    // plugins: [
-    //     new VueLoaderPlugin()
-    // ],
+    plugins: [
+        new VueLoaderPlugin()
+    ],
     module: {
         rules: [{
             test: /\.css$/,
@@ -24,11 +29,9 @@ module.exports = {
                 'style-loader',
                 'css-loader'
             ]
-        }
-        // , {
-        //     test: /\.vue$/,
-        //     loader: 'vue-loader'
-        // }
-    ]
+        }, {
+            test: /\.vue$/,
+            loader: 'vue-loader'
+        }]
     }
 };
