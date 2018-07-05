@@ -1,6 +1,10 @@
-import {
-    setHtml
-} from './common.js';
+import './common.css';
 import './hello.css';
+import Vue from 'vue/dist/vue.esm.js';
 
-setHtml('app', '<p class="hello">hello webpack-dev-server!<p>');
+var app = new Vue({
+    el: '#app',
+    data: {
+        message: 'Hello Vue!'
+    }
+});
